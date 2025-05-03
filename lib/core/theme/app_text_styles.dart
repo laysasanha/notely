@@ -13,7 +13,8 @@ class AppTextStyles {
 
   static TextStyle displayMedium = _baseStyle.copyWith(
     fontSize: 20,
-    fontWeight: FontWeight.w900
+    fontWeight: FontWeight.w900,
+    letterSpacing: 0.12 * 20,
   );
 
   static TextStyle displaySmall = _baseStyle.copyWith(
