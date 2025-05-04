@@ -7,6 +7,7 @@ import 'package:notely/widgets/custom_text_field.dart';
 import 'package:notely/widgets/notely_app_bar.dart';
 
 import '../core/routes/list_routes.dart';
+import '../core/theme/app_colors.dart';
 
 class CreateAccount extends StatelessWidget {
   const CreateAccount({super.key});
@@ -26,13 +27,13 @@ class CreateAccount extends StatelessWidget {
                 children: [
                   Text(
                     'Create a free account',
-                    style: AppTextStyles.displayLarge,
+                    style: AppTextStyles.displayLarge.copyWith(color: AppColors.title),
                     textAlign: TextAlign.center,
                   ),
                   const SizedBox(height: 6),
                   Text(
                     'Join Notely for free. Create and share unlimited notes with your friends.',
-                    style: AppTextStyles.textMedium,
+                    style: AppTextStyles.textMedium.copyWith(color: AppColors.text),
                     textAlign: TextAlign.center,
                   ),
                   const SizedBox(height: 22),

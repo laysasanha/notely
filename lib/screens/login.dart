@@ -3,6 +3,7 @@ import 'package:go_router/go_router.dart';
 import 'package:notely/widgets/notely_app_bar.dart';
 
 import '../core/routes/list_routes.dart';
+import '../core/theme/app_colors.dart';
 import '../core/theme/app_text_styles.dart';
 import '../widgets/authLinkText.dart';
 import '../widgets/custom_button.dart';
@@ -26,13 +27,13 @@ class Login extends StatelessWidget {
                 children: [
                   Text(
                     'Login',
-                    style: AppTextStyles.displayLarge,
+                    style: AppTextStyles.displayLarge.copyWith(color: AppColors.title),
                     textAlign: TextAlign.center,
                   ),
                   const SizedBox(height: 6),
                   Text(
                     'Sign in to your account and start managing your notes.',
-                    style: AppTextStyles.textMedium,
+                    style: AppTextStyles.textMedium.copyWith(color: AppColors.text),
                     textAlign: TextAlign.center,
                   ),
                   const SizedBox(height: 30),
