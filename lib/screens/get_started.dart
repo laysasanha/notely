@@ -3,7 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
 import 'package:notely/core/theme/app_colors.dart';
 import 'package:notely/core/theme/app_text_styles.dart';
-import 'package:notely/widgets/AuthLinkText.dart';
+import 'package:notely/widgets/authLinkText.dart';
 import 'package:notely/widgets/custom_button.dart';
 import 'package:notely/widgets/notely_app_bar.dart';
 
@@ -17,52 +17,51 @@ class GetStartedScreen extends StatelessWidget {
     return Scaffold(
       appBar: const AppBarNotely(),
       body: SafeArea(
-         child: Padding(
-           padding: const EdgeInsets.symmetric(vertical: 16),
-           child: Center(
-             child: Column(
-               crossAxisAlignment: CrossAxisAlignment.center,
-               children: [
-                 Column(
-                   children: [
-                   Image.asset(
-                     'assets/images/computerWelcome.png',
-                     height: 268,
-                   ),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Expanded(
+                child: Center(
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Image.asset(
+                        'assets/images/computerWelcome.png',
+                        height: 268,
+                      ),
 
-                   Text(
-                     'World’s Safest And Largest Digital Notebook',
-                     style: AppTextStyles.displayLarge.copyWith(
-                         color: AppColors.title
-                     ),
-                     textAlign: TextAlign.center,
-                   ),
-                  ],
-                 ),
+                      Text(
+                        'World’s Safest And Largest Digital Notebook',
+                        style: AppTextStyles.displayLarge.copyWith(
+                          color: AppColors.title,
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              SizedBox(height: 20),
 
-                 Spacer(),
+              Column(
+                children: [
+                  CustomButton(text: 'GET STARTED', onPressed: () {}),
 
-                 Column(
-                   children: [
-                     CustomButton(
-                         text: 'GET STARTED',
-                         onPressed: () {}
-                     ),
+                  SizedBox(height: 20),
 
-                     SizedBox(height: 20),
-
-                     Authlinktext(
-                         text: 'Already have an account?',
-                         onTap: (){
-                           context.pushNamed(AppRoutes.login.name);
-                         }
-                     ),
-                   ],
-                 ),
-               ],
-             ),
-           ),
-         ),
+                  Authlinktext(
+                    text: 'Already have an account?',
+                    onTap: () {
+                      context.pushNamed(AppRoutes.login.name);
+                    },
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
