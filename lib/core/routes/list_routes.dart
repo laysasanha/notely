@@ -1,6 +1,7 @@
 enum AppRoutes{
   getStarted('/', 'getStarted'),
-  login('/createAccount', 'createAccount');
+  createAccount('/createAccount', 'createAccount'),
+  login('/login', 'login');
 
   const AppRoutes(this.path, this.name);
 

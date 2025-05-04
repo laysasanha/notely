@@ -2,6 +2,7 @@ import 'package:go_router/go_router.dart';
 import 'package:notely/core/routes/list_routes.dart';
 import 'package:notely/screens/create_account.dart';
 import 'package:notely/screens/get_started.dart';
+import 'package:notely/screens/login.dart';
 
 final GoRouter router = GoRouter(
     initialLocation: AppRoutes.getStarted.path,
@@ -13,9 +14,15 @@ final GoRouter router = GoRouter(
       ),
 
       GoRoute(
+        path: AppRoutes.createAccount.path,
+        name: AppRoutes.createAccount.name,
+        builder: (context, state) => const CreateAccount(),
+      ),
+
+      GoRoute(
         path: AppRoutes.login.path,
         name: AppRoutes.login.name,
-        builder: (context, state) => const CreateAccount(),
+        builder: (context, state) => const Login(),
       ),
     ]
 );

@@ -54,7 +54,7 @@ class GetStartedScreen extends StatelessWidget {
                   Authlinktext(
                     text: 'Already have an account?',
                     onTap: () {
-                      context.pushNamed(AppRoutes.login.name);
+                      context.pushNamed(AppRoutes.createAccount.name);
                     },
                   ),
                 ],
