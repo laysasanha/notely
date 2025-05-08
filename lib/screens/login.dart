@@ -58,7 +58,9 @@ class Login extends StatelessWidget {
                 children: [
                   CustomButton(
                     text: 'Login',
-                    onPressed: () {},
+                    onPressed: () {
+                      context.pushNamed(AppRoutes.notes.name);
+                    },
                   ),
                   const SizedBox(height: 20),
                   Authlinktext(

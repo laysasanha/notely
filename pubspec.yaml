@@ -37,6 +37,7 @@ flutter:
     - assets/fonts/
     - assets/splash/logoSplashScreen.png
     - assets/images/computerWelcome.png
+    - assets/images/computersCreateNote.png
     - assets/logo/notelyLogo.svg
 
   fonts:

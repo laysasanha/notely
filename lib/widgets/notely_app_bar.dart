@@ -1,19 +1,22 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:notely/core/theme/app_colors.dart';
+import 'package:notely/core/theme/app_text_styles.dart';
 
 class AppBarNotely extends StatelessWidget implements PreferredSizeWidget{
-  final Widget? title;
+  final String? titleText;
   final bool centerTitle;
   final bool showBackButton;
-
+  final Widget? leadingIcon;
+  final List<Widget>? actionIcons;
 
   const AppBarNotely(
       { super.key,
-        this.title,
+        this.titleText,
         this.centerTitle = true,
         this.showBackButton = false,
+        this.leadingIcon,
+        this.actionIcons,
       });
 
   @override
@@ -26,7 +29,16 @@ class AppBarNotely extends StatelessWidget implements PreferredSizeWidget{
       elevation: 0,
       automaticallyImplyLeading: showBackButton,
       centerTitle: centerTitle,
-      title: title ?? SvgPicture.asset(
+      leading: leadingIcon,
+      actions: actionIcons,
+      title: titleText != null
+        ? Text(
+        titleText!,
+        style: AppTextStyles.displayMedium.copyWith(
+          color: AppColors.title
+        )
+      )
+        : SvgPicture.asset(
           'assets/logo/notelyLogo.svg',
           height: 20
       ),

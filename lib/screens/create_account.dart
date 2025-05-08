@@ -73,7 +73,9 @@ class CreateAccount extends StatelessWidget {
                 children: [
                   CustomButton(
                     text: 'Create Account',
-                    onPressed: () {},
+                    onPressed: () {
+                      context.pushNamed(AppRoutes.notes.name);
+                    },
                   ),
                   const SizedBox(height: 20),
                   Authlinktext(

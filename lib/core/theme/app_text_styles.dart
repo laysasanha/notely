@@ -22,11 +22,6 @@ class AppTextStyles {
     fontWeight: FontWeight.w900
   );
 
-  static TextStyle headlineSmall = _baseStyle.copyWith(
-      fontSize: 14,
-      fontWeight: FontWeight.w900
-  );
-
   //Text Bold
   static TextStyle titleLarge = _baseStyle.copyWith(
     fontSize: 18,

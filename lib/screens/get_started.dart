@@ -47,7 +47,9 @@ class GetStartedScreen extends StatelessWidget {
 
               Column(
                 children: [
-                  CustomButton(text: 'GET STARTED', onPressed: () {}),
+                  CustomButton(text: 'GET STARTED', onPressed: () {
+                    context.pushNamed(AppRoutes.notes.name);
+                  }),
 
                   SizedBox(height: 20),
 
